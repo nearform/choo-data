@@ -1,0 +1,36 @@
+{
+  "name": "choo-data",
+  "version": "0.1.0",
+  "description": "Simple data fetching plugin for Choo",
+  "homepage": "https://github.com/nearform/choo-data",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "prepublishOnly": "npm run lint"
+  },
+  "author": "Diogo Cunha - @diffcunha",
+  "license": "MIT",
+  "keywords": [
+    "choo",
+    "data",
+    "data-fetching"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nearform/choo-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nearform/choo-data/issues"
+  },
+  "dependencies": {
+    "deep-equal": "^1.0.1"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "ignore": [
+      "examples/"
+    ]
+  }
+}

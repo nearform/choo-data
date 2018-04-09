@@ -1,6 +1,6 @@
 {
   "name": "choo-data",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple data fetching plugin for Choo",
   "homepage": "https://github.com/nearform/choo-data",
   "main": "index.js",

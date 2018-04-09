@@ -2,6 +2,8 @@
 
 Simple data fetching plugin for Choo with SSR (server-side rendering) support.
 
+Requires [choo-async](https://github.com/nearform/choo-async).
+
 [Usage](#usage) -
 [Install](#install) -
 [License: MIT](#license)
@@ -18,10 +20,11 @@ Simple data fetching plugin for Choo with SSR (server-side rendering) support.
 
 ```js
 const choo = require('choo')
-const html = require('choo/html')
 const data = require('choo-data')
+const async = require('choo-async')
+const html = require('choo-async/html')
 
-const app = choo()
+const app = async(choo())
 
 app.use(data())
 app.route('/', view)

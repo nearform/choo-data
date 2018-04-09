@@ -1,9 +1,13 @@
-var onChange = require('./utils').onChange
+'use strict'
+
+var assert = require('assert')
+var utils = require('./utils')
 
 var isBrowser = typeof window !== 'undefined'
 
 function store () {
   return function data (state, emitter, app) {
+    assert.equal(state.async, true, 'choo-async decorator is required')
     // State
     state.data = state.data || {}
 
@@ -29,7 +33,7 @@ function store () {
         var store = state.data[name] || {}
 
         if (typeof update !== 'function') {
-          update = onChange(update)
+          update = utils.onChange(update)
         }
         var args = update(store.args)
         if (!args) {

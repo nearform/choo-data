@@ -1,8 +1,9 @@
 const choo = require('choo')
-const html = require('choo/html')
 const data = require('choo-data')
+const async = require('choo-async')
+const html = require('choo-async/html')
 
-const app = choo()
+const app = async(choo())
 
 app.use(data())
 app.route('/', view)
@@ -14,7 +15,8 @@ async function view (state, emit) {
     <body>
       ${post
         ? html`<p>${post.title}</p>`
-        : html`<p>Loading...</p>`}
+        : html`<p>Loading...</p>`
+      }
     </body>
   `
 }
